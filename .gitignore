@@ -1,0 +1,7 @@
+.DS_Store
+/build/
+/static/
+/__pycache__/
+
+# Editor directories and files
+.vscode
