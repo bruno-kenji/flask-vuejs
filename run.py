@@ -4,8 +4,8 @@ from flask_cors import CORS
 from requests import get
 
 app = Flask(__name__,
-            static_folder="./dist/static",
-            template_folder="./dist")
+            static_folder="./vuejs-flask/dist/static",
+            template_folder="./vuejs-flask/dist")
 cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
 
 

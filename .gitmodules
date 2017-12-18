@@ -1,0 +1,4 @@
+[submodule "vuejs-flask"]
+	path = vuejs-flask
+	url = git@github.com:bruno-kenji/vuejs-flask.git
+	branch = master
