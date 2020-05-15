@@ -1,0 +1,26 @@
+kind: pipeline
+name: default
+
+steps:
+- name: test
+  image: alpine
+  commands:
+  - pwd
+  - echo hello
+  - echo world
+  when:
+  branch:
+  - master
+  event:
+  - push
+  - pull-request
+
+- name: send
+  image: plugins/webhook
+  settings:
+    urls: http://HOST:port/drone
+    branch:
+    - auto
+    event:
+    - push
+    - pull-request
