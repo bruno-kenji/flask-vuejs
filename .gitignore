@@ -1,6 +1,7 @@
 .DS_Store
 /static/
 /__pycache__/
+/.venv/
 
 # Editor directories and files
 .vscode
