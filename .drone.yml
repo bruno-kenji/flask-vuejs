@@ -7,7 +7,6 @@ steps:
   commands:
   - pwd
   - echo hello
-  - echo world
   when:
   branch:
   - master
