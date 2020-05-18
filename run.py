@@ -9,7 +9,7 @@ app = Flask(__name__,
 cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
 
 
-@app.route('/api/random')
+@app.route('/api/random', methods=['GET', 'POST'])
 def random_number():
     response = {
         'randomNumber': randint(1, 100)
@@ -17,7 +17,7 @@ def random_number():
     return jsonify(response)
 
 
-@app.route('/', defaults={'path': ''})
+@app.route('/', defaults={'path': ''}, methods=['GET', 'POST'])
 @app.route('/<path:path>')
 def catch_all(path):
     if app.debug:

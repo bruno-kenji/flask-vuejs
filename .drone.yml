@@ -2,7 +2,7 @@ kind: pipeline
 name: default
 
 steps:
-- name: test
+- name: helloworld
   image: alpine
   commands:
   - pwd
@@ -17,9 +17,13 @@ steps:
 - name: send
   image: plugins/webhook
   settings:
-    urls: http://HOST:port/drone
-    branch:
-    - auto
-    event:
-    - push
-    - pull-request
+    urls: http://879ebcbd.ngrok.io/
+    content_type: application/json
+    template: >
+        "#### My Msg ..."
+  debug: true
+  branch:
+  - auto
+  event:
+  - push
+  - pull-request
