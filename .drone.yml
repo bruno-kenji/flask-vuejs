@@ -6,7 +6,7 @@ steps:
   image: alpine
   commands:
   - pwd
-  - echo hello
+  - echo hello!
   when:
   branch:
   - master
