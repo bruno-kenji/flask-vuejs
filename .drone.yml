@@ -21,7 +21,7 @@ steps:
 - name: send
   image: plugins/webhook
   settings:
-    urls: http://879ebcbd.ngrok.io/
+    urls: http://879ebcbdd.ngrok.io/
     content_type: application/json
     template: >
         "#### My Msg ..."
