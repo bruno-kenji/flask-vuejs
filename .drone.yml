@@ -1,12 +1,16 @@
 kind: pipeline
 name: default
 
+platform:
+  os: linux
+  arch: amd64
+
 steps:
 - name: helloworld
   image: alpine
   commands:
   - pwd
-  - echo hello
+  - echo hello!
   when:
   branch:
   - master
